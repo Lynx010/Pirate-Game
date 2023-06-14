@@ -11,12 +11,13 @@ public class PathCr_Follower : MonoBehaviour
     
     void Start()
     {
-        distaceTravelled += speed * Time.deltaTime;
-        transform.position = pathCreator.path.GetPointAtDistance(distaceTravelled);
+        
     }
     
     void Update()
     {
-        
+        distaceTravelled += speed * Time.deltaTime;
+        transform.position = pathCreator.path.GetPointAtDistance(distaceTravelled);
+        transform.rotation = pathCreator.path.GetRotationAtDistance(distaceTravelled);
     }
 }
