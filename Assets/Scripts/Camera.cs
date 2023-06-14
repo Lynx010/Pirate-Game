@@ -9,8 +9,6 @@ public class Camera : MonoBehaviour
     [Header("Clamp Values")]
     public float cameraMinClampX;
     public float cameraMaxClampX;
-    /*public float cameraMinClampY;
-    public float cameraMaxClampY;*/
 
     float cameraVerticalRotation;
     
@@ -22,7 +20,7 @@ public class Camera : MonoBehaviour
     void Update()
     {
         //Get mouse input
-        float inputY = Input.GetAxis    ("Mouse Y") * mouseSensitivity;
+        float inputY = Input.GetAxis("Mouse Y") * mouseSensitivity;
         float inputX = Input.GetAxis("Mouse X") * mouseSensitivity;
 
         //rotate around its Y axis
