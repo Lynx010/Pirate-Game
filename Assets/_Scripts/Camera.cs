@@ -30,7 +30,6 @@ public class Camera : MonoBehaviour
         //rotate around its local X axis
         cameraVerticalRotation -= inputY;
         cameraVerticalRotation = Mathf.Clamp(cameraVerticalRotation, cameraMinClampX, cameraMaxClampX);
-        //transform.localEulerAngles = Vector3.right * cameraVerticalRotation;
         transform.localEulerAngles = new Vector3(cameraVerticalRotation, transform.localEulerAngles.y, 0f);
     }
 }
