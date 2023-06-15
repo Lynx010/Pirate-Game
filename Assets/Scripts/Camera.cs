@@ -12,11 +12,6 @@ public class Camera : MonoBehaviour
 
     float cameraVerticalRotation;
     
-    void Start()
-    {
-        
-    }
-    
     void Update()
     {
         //Get mouse input
