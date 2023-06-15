@@ -12,6 +12,12 @@ public class Camera : MonoBehaviour
 
     float cameraVerticalRotation;
     
+    void Start() 
+    {
+        Cursor.lockState = CursorLockMode.Locked; //locks the cursor
+        Cursor.visible = false;
+    }
+
     void Update()
     {
         //Get mouse input
