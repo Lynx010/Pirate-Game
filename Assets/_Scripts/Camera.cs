@@ -12,6 +12,12 @@ public class Camera : MonoBehaviour
 
     float cameraVerticalRotation;
     
+    void Start() 
+    {
+        Cursor.lockState = CursorLockMode.Locked; //locks the cursor
+        Cursor.visible = false;
+    }
+
     void Update()
     {
         //Get mouse input
@@ -24,7 +30,6 @@ public class Camera : MonoBehaviour
         //rotate around its local X axis
         cameraVerticalRotation -= inputY;
         cameraVerticalRotation = Mathf.Clamp(cameraVerticalRotation, cameraMinClampX, cameraMaxClampX);
-        //transform.localEulerAngles = Vector3.right * cameraVerticalRotation;
         transform.localEulerAngles = new Vector3(cameraVerticalRotation, transform.localEulerAngles.y, 0f);
     }
 }
